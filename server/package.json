@@ -1,0 +1,34 @@
+{
+  "name": "mathuniverse",
+  "version": "1.0.0",
+  "description": "Elearning Platform",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barhouum7/MathUniverse.git"
+  },
+  "keywords": [
+    "elearning",
+    "platform",
+    "student",
+    "instructor"
+  ],
+  "author": "Ibrahim BHMBS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barhouum7/MathUniverse/issues"
+  },
+  "homepage": "https://github.com/barhouum7/MathUniverse#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.11",
+    "nodemon": "^2.0.7"
+  }
+}
