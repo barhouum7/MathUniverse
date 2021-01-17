@@ -44,15 +44,23 @@ mongoose.connect(process.env.DATABASE_URL, {
     useUnifiedTopology: true
     /* Options for how we want to set up 
        our MongoDB inside of our application.. */
-})
+}) /** Since this returns a promise we can use .then and .catch */
+.then(() => app.listen(PORT, () => console.log(`\nConnected successfully to Mongoose.\n\nServer is listening on PORT: ${PORT}\n`)))
+.catch((error) => console.log(error.message))
 
-const db = mongoose.connection /* Access the connection here.. */
-/* Here we just log if we're or are not connected to our database. */
-db.on('error', error => console.log(error))
-db.once('open', () => console.log('Connected successfully to Mongoose.'))
 
-app.listen(PORT, (error) => {
-    error ?
-        console.log(`\nERROR! Something Went Wrong.\n`) :
-        console.log(`\nServer is listening on PORT: ${PORT}\n`)
-}) /* Telling to our App that we want to Listening on Certain PORT */
+/***********************WE CAN USE THIS METHOD ALSO**************************** */
+// const db = mongoose.connection /* Access the connection here.. */
+// /* Here we just log if we're or are not connected to our database. */
+// db.on('error', error => console.log(error))
+// db.once('open', () => console.log('Connected successfully to Mongoose.'))
+
+// app.listen(PORT, (error) => {
+//     error ?
+//         console.log(`\nERROR! Something Went Wrong.\n`) :
+//         console.log(`\nServer is listening on PORT: ${PORT}\n`)
+// }) /* Telling to our App that we want to Listening on Certain PORT */
+
+
+/** Okay the following LOC is just for make sure that we don't get any WARNINGS in the console.*/
+mongoose.set('useFindAndModify', false)
