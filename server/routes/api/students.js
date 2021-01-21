@@ -1,9 +1,8 @@
 import express from 'express'
+import { getStudents } from '../../controllers/students.js'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.send('Okay Its Works! 2222222222222')
-})
+router.get('/', getStudents)
 
 export default router

@@ -1,9 +1,7 @@
 import express from 'express'
-
+import { getInstructors } from '../../controllers/instructors.js'
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.send('Okay Its Works! 333333333333333')
-})
+router.get('/', getInstructors)
 
 export default router
