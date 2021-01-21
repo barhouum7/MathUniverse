@@ -21,8 +21,10 @@ import cors from 'cors'
 import mongoose from 'mongoose' /* Import Mongoose from The Mongoose Library that is installed already using NPM */
 import path from 'path'
 
-import { instructorsRoutes, studentsRoutes, coursesRoutes } from './routes/api'
-
+// const { instructorsRoutes, studentsRoutes, coursesRoutes } = require('./routes/api/index.js')
+import instructorsRoutes from './routes/api/instructors.js'
+import studentsRoutes from './routes/api/students.js'
+import coursesRoutes from './routes/api/courses.js'
 
 
 
@@ -31,15 +33,15 @@ const PORT = process.env.PORT || 5000
 const app = express()
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }))
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }))
 app.use(cors())
 /* ********************Now Make Express Use our ROutes******************* */
-app.use('/api/courses', coursesRoutes)
-app.use('/api/students', studentsRoutes)
 app.use('/api/instructors', instructorsRoutes)
+app.use('/api/students', studentsRoutes)
+app.use('/api/courses', coursesRoutes)
 
 
 
