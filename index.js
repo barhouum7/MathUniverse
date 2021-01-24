@@ -31,6 +31,7 @@ import coursesRoutes from './routes/api/courses.js'
 const PORT = process.env.PORT || 5000
 
 const app = express()
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }))
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }))
@@ -44,16 +45,15 @@ app.use('/api/courses', coursesRoutes)
 
 if (process.env.NODE_ENV === 'production') {
     // Serve the static files from the React app
-    app.use(express.static(path.join(__dirname, 'client', 'build')));
-    // app.use(express.static(path.join(__dirname, 'client/build')));
+    // app.use(express.static(path.join(__dirname, 'client', 'build')));
     // Handles any requests that don't match the ones in the routes
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-    });
-
     // app.get('*', (req, res) => {
-    //     res.sendFile(path.join(__dirname + '/client/build/index.html'));
+    //     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
     // });
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname+'/client/build/index.html'))
+    })
 }
 
 /** Now Connecting Our server app to a Cloud DataBase which is MongoDB Atlas VIa Mongoose */

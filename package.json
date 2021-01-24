@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "client": "cd client && npm start",
     "server": "nodemon index.js",
-    "devStart": "run-p server client",
-    "heroku-postbuild": "cd client && npm install && npm install && npm run build"
+    "devStart": "run-p server client"
   },
   "repository": {
     "type": "git",
