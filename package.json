@@ -5,11 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "client": "cd client && npm start",
     "server": "nodemon index.js",
-    "devStart": "run-p server client"
+    "client": "npm start --prefix client",
+    "devStart": "run-p server client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
