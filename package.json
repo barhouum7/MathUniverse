@@ -2,11 +2,11 @@
   "name": "mathuniverse",
   "version": "1.0.0",
   "description": "Elearning Platform",
-  "main": "index.js",
+  "main": "./index.js",
   "type": "module",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "node index.js",
+    "start": "node ./index.js",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
     "devStart": "run-p server client",
