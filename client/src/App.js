@@ -6,8 +6,11 @@ import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core'
 
 import Courses from './components/Courses/Courses'
 import Form from './components/Form/Form'
+// import useStyles from './styles'
 
 const App = () => {
+  // const classes = useStyles()
+
   return (
     <Container maxWidth="lg">
       <AppBar position="static" color="inherit">

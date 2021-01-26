@@ -3,7 +3,9 @@
 An E-learning Platform, based on the MERN stack.
 
 
-This project was bootstrapped with <a href="https://github.com/facebook/create-react-app"> Create React App </a>.
+This project was bootstrapped with <a href="https://github.com/facebook/create-react-app"> Create React App </a> with other libraries.
+
+The UI was built based on [Material-UI](https://material-ui.com) also with it's associated libraries ecosystem
 
 ## Installation Instructions
 

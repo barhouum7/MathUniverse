@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="E-learning Platform"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,7 +25,50 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Math Universe</title>
+      <!-- Roboto Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <!-- Font Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    
+  <title>Math Universe</title>
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: linear-gradient(left, #fff, #e4e4e4);
+      border: 1px solid rgba(156, 152, 152, 0.5);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(156, 152, 152, 0.5);
+    }
+  </style>
+
+<script>
+  function snap(destination) {
+    if (Math.abs(destination - window.scrollY) < 3) {
+      scrollTo(window.scrollX, destination);
+    } else if (Math.abs(destination - window.scrollY) < 200) {
+      scrollTo(window.scrollX, window.scrollY + ((destination - window.scrollY) / 2));
+      setTimeout(snap, 20, destination);
+    }
+  }
+  var timeoutId = null;
+  addEventListener("scroll", function () {
+    if (timeoutId) clearTimeout(timeoutId);
+    timeoutId = setTimeout(snap, 200, parseInt(document.getElementById('root').style.top));
+  }, true);
+</script>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
