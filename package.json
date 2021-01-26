@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "node server.js",
+    "start": "node ./server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "devStart": "run-p server client",
