@@ -13,6 +13,6 @@ The UI was built based on [Material-UI](https://material-ui.com) also with it's 
 1. Install **npm**
 1. If you plan to use a local instance of **MongoDB database**, install **MongoDB atlas**.
 1. Clone this github repo.
-1. Open the local project directory in a terminal, and run: `npm install`.
+1. Open the local project directory in a terminal, and run: `npm install && npm run devStart` for both client and server side to start the app.
 
 ## Available Scripts
