@@ -34,7 +34,8 @@ import tileimage3 from "../../assets/images/blog/img-3.jpg"
 import tileimage4 from "../../assets/images/blog/img-4.jpg"
 import tileimage5 from "../../assets/images/blog/img-5.jpg"
 
-import Video1 from "../../components/Videos/Video"
+import Video1 from "../../components/Videos/Video1"
+import Video2 from "../../components/Videos/Video2"
 
 const useStyles = makeStyles((theme) => ({
   heroText: {
@@ -43,11 +44,10 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   header: {
-    height: "60vh",
+    height: "79vh",
     backgroundSize: "cover",
     backgroundPosition: "65% 50%",
     backgroundAttachment: "fixed",
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroImage})`,
   },
   avatar: {
     backgroundColor: "#e67e22",
@@ -248,6 +248,7 @@ function Dashboard({ darkTheme }) {
   return (
     <Fragment>
       <Grid container alignItems="center" className={classes.header}>
+      <Video2 />
         <Grid item className={classes.heroText} align="center">
           <Typography variant="h4" gutterBottom>
             Attend math and physics lessons according to the official program while staying at home.
