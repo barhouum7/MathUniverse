@@ -4,7 +4,7 @@ import { updateObject } from "../utility"
 const initialState = {
   sideOpen: false,
   sideDraw: false,
-  darkTheme: null,
+  darkTheme: true,
 }
 
 const openAnchor = (state, action) => {

@@ -9,7 +9,6 @@ class Video extends Component {
         <video src={video1} muted loop autoplay="true" 
         style={{ 
           position: "absolute",
-          // height: "60vh" ,
           objectFit: "cover",
           top: "50px",
           left: "0",
@@ -22,7 +21,6 @@ class Video extends Component {
       </div>
       <div style={{ 
           position: "absolute",
-          // height: "60vh" ,
           objectFit: "cover",
           top: "50px",
           left: "0",
@@ -32,7 +30,6 @@ class Video extends Component {
           backgroundColor: "#738878",
           mixBlendMode: "overlay",
           backgroundAttachment: "fixed",
-          zIndex: "100",
           }}>
       </div>
       </>
