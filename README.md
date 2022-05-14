@@ -7,7 +7,7 @@ This project was bootstrapped with <a href="https://github.com/facebook/create-r
 
 The UI was built based on [Material-UI](https://material-ui.com) also with it's associated libraries ecosystem
 
-###### Have a look at the Demo: https://mathuniverse.herokuapp.com/
+###### Have a look at the Demo: https://thenewelearn.herokuapp.com/
 
 ## Installation Instructions
 
